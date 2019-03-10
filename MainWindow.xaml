@@ -4,9 +4,10 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:wpf="clr-namespace:HencoDesu.RaphApi.WPF;assembly=RaphApi.WPF"
+        xmlns:controls="clr-namespace:HencoDesu.RaphApi.WPF.Controls;assembly=RaphApi.WPF"
         mc:Ignorable="d"
+        Icon="pack://application:,,,/Resources/MTG Collection.ico"
         Title="MTG Collection" Height="350" Width="525">
-    <Grid>
         
-    </Grid>
+        
 </wpf:RaphWindow>
