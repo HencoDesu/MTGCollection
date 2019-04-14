@@ -7,11 +7,11 @@
                      xmlns:view="clr-namespace:HencoDesu.MtgCollection.View"
                      xmlns:viewModel="clr-namespace:HencoDesu.MtgCollection.ViewModel"
                      mc:Ignorable="d" Icon="pack://application:,,,/Resources/MTG Collection.ico" Title="MTG Collection"
-                     SizeChanged="RaphWindow_OnSizeChanged" Height="420" Width="525">
+                     Height="500" Width="525">
 	
 	<controls:RaphWindow.DataContext>
 		<viewModel:MainWindow/>
 	</controls:RaphWindow.DataContext>
 	
-	<UniformGrid x:Name="CardsGrid"/>
+	<view:Collection DataContext="{Binding Collection}"/>
 </controls:RaphWindow>

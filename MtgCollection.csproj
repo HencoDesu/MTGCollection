@@ -59,9 +59,13 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="ViewModel\Card.cs" />
+    <Compile Include="ViewModel\Collection.cs" />
     <Compile Include="ViewModel\MainWindow.cs" />
     <Compile Include="View\Card.xaml.cs">
       <DependentUpon>Card.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Collection.xaml.cs">
+      <DependentUpon>Collection.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
@@ -92,6 +96,7 @@
   </ItemGroup>
   <ItemGroup>
     <Page Include="View\Card.xaml" />
+    <Page Include="View\Collection.xaml" />
     <Page Include="View\MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
