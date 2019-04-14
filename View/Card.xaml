@@ -4,10 +4,9 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:controls="clr-namespace:HencoDesu.RaphApi.WPF.Controls;assembly=RaphApi.WPF"
              xmlns:viewModel="clr-namespace:HencoDesu.MtgCollection.ViewModel"
-             mc:Ignorable="d" d:DesignHeight="300" d:DesignWidth="300" d:DataContext="{viewModel:Card }"
-             Background="#F00A0A0A">
+             mc:Ignorable="d" d:DesignHeight="300" d:DesignWidth="300" d:DataContext="{viewModel:Card }">
 	
-	<Grid>
+	<Grid MaxHeight="350" Background="#F00A0A0A">
 		<Grid.RowDefinitions>
 			<RowDefinition Height="300"/>
 			<RowDefinition Height="50"/>

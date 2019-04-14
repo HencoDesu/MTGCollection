@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Windows;
-using System.Windows.Data;
 
 namespace HencoDesu.MtgCollection.View {
 	/// <summary>
@@ -12,8 +11,8 @@ namespace HencoDesu.MtgCollection.View {
 		}
 
 		private void RaphWindow_OnSizeChanged(object sender, SizeChangedEventArgs e) {
-			CardsGrid.Rows = (int)Math.Floor(CardsGrid.Height / 360);
-			CardsGrid.Columns = (int)Math.Floor(CardsGrid.Width / 220);
+			CardsGrid.Rows = (int)Math.Floor(CardsGrid.ActualHeight / 360);
+			CardsGrid.Columns = (int)Math.Floor(CardsGrid.ActualWidth / 220);
 
 			if (CardsGrid.Children.Count != CardsGrid.Rows * CardsGrid.Columns) {
 				CardsGrid.Children.Clear();

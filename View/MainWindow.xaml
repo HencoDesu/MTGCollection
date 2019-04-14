@@ -7,7 +7,7 @@
                      xmlns:view="clr-namespace:HencoDesu.MtgCollection.View"
                      xmlns:viewModel="clr-namespace:HencoDesu.MtgCollection.ViewModel"
                      mc:Ignorable="d" Icon="pack://application:,,,/Resources/MTG Collection.ico" Title="MTG Collection"
-                     SizeChanged="RaphWindow_OnSizeChanged" Height="350" Width="525">
+                     SizeChanged="RaphWindow_OnSizeChanged" Height="420" Width="525">
 	
 	<controls:RaphWindow.DataContext>
 		<viewModel:MainWindow/>
