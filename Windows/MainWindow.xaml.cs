@@ -1,4 +1,4 @@
-﻿namespace HencoDesu.MtgCollection {
+﻿namespace HencoDesu.MtgCollection.Windows {
 	/// <summary>
 	/// Interaction logic for MainWindow.xaml
 	/// </summary>

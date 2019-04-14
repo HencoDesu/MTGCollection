@@ -1,0 +1,12 @@
+﻿<controls:RaphWindow x:Class="HencoDesu.MtgCollection.Windows.MainWindow"
+                     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                     xmlns:controls="clr-namespace:HencoDesu.RaphApi.WPF.Controls;assembly=RaphApi.WPF"
+                     xmlns:mtgCollection="clr-namespace:HencoDesu.MtgCollection"
+                     mc:Ignorable="d" Icon="pack://application:,,,/Resources/MTG Collection.ico" Title="MTG Collection"
+                     Height="350" Width="525">
+
+	<controls:RaphButton Command="{Binding Command}" Content="12345" Margin="100"/>
+</controls:RaphWindow>
