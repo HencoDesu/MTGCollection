@@ -1,5 +1,4 @@
 using System;
-using System.Collections.Generic;
 using System.Threading.Tasks;
 using Hencodesu.ScryfallNet.Abstractions;
 using Hencodesu.ScryfallNet.Models;
