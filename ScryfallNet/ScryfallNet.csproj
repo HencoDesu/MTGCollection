@@ -1,0 +1,13 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>netstandard2.0</TargetFramework>
+        <RootNamespace>Hencodesu.ScryfallNet</RootNamespace>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Microsoft.Rest.ClientRuntime" Version="2.3.20" />
+      <PackageReference Include="Newtonsoft.Json" Version="12.0.2-beta1" />
+    </ItemGroup>
+
+</Project>
