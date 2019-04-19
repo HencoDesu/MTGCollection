@@ -6,23 +6,34 @@
              xmlns:viewModel="clr-namespace:HencoDesu.MtgCollection.ViewModel"
              mc:Ignorable="d" d:DesignHeight="300" d:DesignWidth="300" d:DataContext="{viewModel:Card }">
 	
-	<Grid MaxHeight="350" Background="#F00A0A0A">
+	<Grid MaxHeight="360" Background="#F00A0A0A">
 		<Grid.RowDefinitions>
+			<RowDefinition Height="30"/>
 			<RowDefinition Height="300"/>
-			<RowDefinition Height="50"/>
+			<RowDefinition Height="30"/>
 		</Grid.RowDefinitions>
 		
-		<Image Source="{Binding Image}" Grid.Row="0"/>
+		<TextBlock Text="{Binding CardName}" Grid.Column="0" TextAlignment="Center" 
+		           VerticalAlignment="Center" FontSize="20">
+			<TextBlock.ToolTip>
+				<Image Source="{Binding Image}" Height="500"/>
+			</TextBlock.ToolTip>
+		</TextBlock>
+
 		
-		<Grid Grid.Row="1" HorizontalAlignment="Center">
+		<Image Source="{Binding Image}" Grid.Row="1"/>
+		
+		
+		<Grid Grid.Row="2" HorizontalAlignment="Center">
 			<Grid.ColumnDefinitions>
-				<ColumnDefinition Width="55"/>
+				<ColumnDefinition Width="30"/>
 				<ColumnDefinition Width="100"/>
-				<ColumnDefinition Width="55"/>
+				<ColumnDefinition Width="30"/>
 			</Grid.ColumnDefinitions>
 			
 			<controls:RaphButton Content="-" Command="{Binding Decrement}" Grid.Column="0" Margin="5"/>
-			<TextBlock Text="{Binding Amount}" Grid.Column="1" TextAlignment="Center" VerticalAlignment="Center" FontSize="20"/>
+			<TextBlock Text="{Binding Amount}" Grid.Column="1" TextAlignment="Center" 
+			           VerticalAlignment="Center" FontSize="20"/>
 			<controls:RaphButton Content="+" Command="{Binding Increment}" Grid.Column="2" Margin="5"/>
 		</Grid>
 	</Grid>

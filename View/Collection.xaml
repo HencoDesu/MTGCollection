@@ -8,25 +8,6 @@
              mc:Ignorable="d" d:DesignHeight="300" d:DesignWidth="300" 
              SizeChanged="UserControl_OnSizeChanged">
 	<Grid>
-		<Grid.RowDefinitions>
-			<RowDefinition Height="30"/>
-			<RowDefinition Height="*"/>
-		</Grid.RowDefinitions>
-		
-		<Grid Grid.Row="0">
-			<StackPanel Orientation="Horizontal">
-				<TextBox Width="150"/>
-				<controls:RaphButton Content="\{W}"/>
-				<controls:RaphButton Content="\{U}"/>
-				<controls:RaphButton Content="\{B}"/>
-				<controls:RaphButton Content="\{R}"/>
-				<controls:RaphButton Content="\{G}"/>
-				<controls:RaphButton Content="\{C}"/>
-				<controls:RaphButton Content="\{MC}"/>
-				<controls:RaphButton Content="..."/>
-			</StackPanel>
-		</Grid>
-		
-		<UniformGrid x:Name="CardsGrid" Grid.Row="1"/>
+		<UniformGrid x:Name="CardsGrid"/>
 	</Grid>
 </UserControl>

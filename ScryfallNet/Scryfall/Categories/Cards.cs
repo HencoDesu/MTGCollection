@@ -39,7 +39,7 @@ namespace Hencodesu.ScryfallNet.Scryfall.Categories {
 			Client.AddQueryParameter(queryParameters, "include_extras", includeExtras);
 			Client.AddQueryParameter(queryParameters, "page", page);
 
-			return await Client.GetAsync<CardList>(Client.ConstructUrl("cards", queryParameters))
+			return await Client.GetAsync<CardList>(Client.ConstructUrl("cards/search", queryParameters))
 			                   .ConfigureAwait(false);
 		}
 
@@ -60,7 +60,7 @@ namespace Hencodesu.ScryfallNet.Scryfall.Categories {
 			Client.AddQueryParameter(queryParameters, "version", version);
 			Client.AddQueryParameter(queryParameters, "pretty", pretty);
 
-			return await Client.GetAsync<Card>(Client.ConstructUrl("cards", queryParameters))
+			return await Client.GetAsync<Card>(Client.ConstructUrl("cards/named", queryParameters))
 			                   .ConfigureAwait(false);
 		}
 
@@ -68,28 +68,28 @@ namespace Hencodesu.ScryfallNet.Scryfall.Categories {
 		public async Task<Catalog> AutocompleteAsync(string q) {
 			var queryParameters = new List<string> {$"q={Uri.EscapeDataString(q)}"};
 
-			return await Client.GetAsync<Catalog>(Client.ConstructUrl("cards", queryParameters))
+			return await Client.GetAsync<Catalog>(Client.ConstructUrl("cards/autocomplete", queryParameters))
 			                   .ConfigureAwait(false);
 		}
 
 		/// <inheritdoc />
 		public async Task<Card> GetRandomAsync() =>
-			await Client.GetAsync<Card>(Client.ConstructUrl("cards"))
+			await Client.GetAsync<Card>(Client.ConstructUrl("cards/random"))
 			            .ConfigureAwait(false);
 
 		/// <inheritdoc />
 		public async Task<Card> GetByMultiverseIdAsync(int id) =>
-			await Client.GetAsync<Card>(Client.ConstructUrl($"cards/{Client.UrlPart(id)}"))
+			await Client.GetAsync<Card>(Client.ConstructUrl($"cards/multiverse/{Client.UrlPart(id)}"))
 			            .ConfigureAwait(false);
 
 		/// <inheritdoc />
 		public async Task<Card> GetByMtgoIdAsync(int id) =>
-			await Client.GetAsync<Card>(Client.ConstructUrl($"cards/{Client.UrlPart(id)}"))
+			await Client.GetAsync<Card>(Client.ConstructUrl($"cards/mtgo/{Client.UrlPart(id)}"))
 			            .ConfigureAwait(false);
 
 		/// <inheritdoc />
 		public async Task<Card> GetByArenaIdAsync(int id) =>
-			await Client.GetAsync<Card>(Client.ConstructUrl($"cards/{Client.UrlPart(id)}"))
+			await Client.GetAsync<Card>(Client.ConstructUrl($"cards/arena/{Client.UrlPart(id)}"))
 			            .ConfigureAwait(false);
 
 		/// <inheritdoc />

@@ -119,5 +119,11 @@
   <ItemGroup>
     <Folder Include="Model" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="ScryfallNet\ScryfallNet.csproj">
+      <Project>{714996cc-e6f7-4459-ace9-2b80fc3447d1}</Project>
+      <Name>ScryfallNet</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

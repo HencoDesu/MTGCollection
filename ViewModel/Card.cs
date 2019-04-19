@@ -6,30 +6,25 @@ using HencoDesu.RaphApi.WPF.ViewModel;
 
 namespace HencoDesu.MtgCollection.ViewModel {
 	public class Card : RaphViewModel {
-
-		public Card(int multiverseId) {
-			_multiverseId = multiverseId;
+		public Card(Hencodesu.ScryfallNet.Scryfall.Models.Card card) {
+			_card = card;
 		}
+		
+		private readonly Hencodesu.ScryfallNet.Scryfall.Models.Card _card;
 
-		private readonly int _multiverseId;
-		public ImageSource Image => new BitmapImage(
-			new Uri($"https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid={_multiverseId}&type=card"));
+		public string CardName => _card.Name;
 
-		private int _amount = 0;
+		public ImageSource Image => new BitmapImage(new Uri(_card.ImageUris.Png));
 
+		private int _amount;
 		public int Amount {
 			get => _amount;
 			set => UpdateProperty(ref _amount, value);
 		}
 
-		public ICommand Increment {
-			get => new RaphCommand((obj) => Amount++);
-		}
+		public ICommand Increment => new RaphCommand((obj) => Amount++);
 
-		public ICommand Decrement {
-			get => new RaphCommand(
-				(obj) => Amount--,
-				(obj) => Amount > 0);
-		}
+		public ICommand Decrement => new RaphCommand((obj) => Amount--,
+		                                             (obj) => Amount > 0);
 	}
 }
