@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using Hencodesu.ScryfallNet.Scryfall;
+using Hencodesu.ScryfallNet;
 using HencoDesu.RaphApi.WPF.ViewModel;
 
 namespace HencoDesu.MtgCollection.ViewModel {

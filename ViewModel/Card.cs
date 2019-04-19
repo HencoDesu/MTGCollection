@@ -6,11 +6,11 @@ using HencoDesu.RaphApi.WPF.ViewModel;
 
 namespace HencoDesu.MtgCollection.ViewModel {
 	public class Card : RaphViewModel {
-		public Card(Hencodesu.ScryfallNet.Scryfall.Models.Card card) {
+		public Card(Hencodesu.ScryfallNet.Models.Card card) {
 			_card = card;
 		}
 		
-		private readonly Hencodesu.ScryfallNet.Scryfall.Models.Card _card;
+		private readonly Hencodesu.ScryfallNet.Models.Card _card;
 
 		public string CardName => _card.Name;
 
