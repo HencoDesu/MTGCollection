@@ -4,10 +4,26 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:HencoDesu.MtgCollection.View"
+             xmlns:vm="clr-namespace:HencoDesu.MtgCollection.ViewModel"
              xmlns:controls="clr-namespace:HencoDesu.RaphApi.WPF.Controls;assembly=RaphApi.WPF"
-             mc:Ignorable="d" d:DesignHeight="300" d:DesignWidth="300" 
-             SizeChanged="UserControl_OnSizeChanged">
+             mc:Ignorable="d" d:DesignHeight="300" d:DesignWidth="300"
+             Loaded="Collection_OnLoaded"
+             SizeChanged="UserControl_OnSizeChanged" d:DataContext="{vm:Collection}">
 	<Grid>
-		<UniformGrid x:Name="CardsGrid"/>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="30"/>
+			<ColumnDefinition Width="*"/>
+			<ColumnDefinition Width="30"/>
+		</Grid.ColumnDefinitions>
+		
+		<controls:RaphButton Command="{Binding PreviousPage}" 
+		                     Grid.Column="0" Content="&#xf060;" Margin="5"
+		                     FontFamily="FontAwesome"/>
+		
+		<UniformGrid x:Name="CardsGrid" Grid.Column="1"/>
+		
+		<controls:RaphButton Command="{Binding NextPage}" 
+		                     Grid.Column="2" Content="&#xf061;" Margin="5"
+		                     FontFamily="FontAwesome"/>
 	</Grid>
 </UserControl>
